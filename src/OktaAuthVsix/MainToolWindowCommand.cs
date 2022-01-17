@@ -110,12 +110,12 @@ namespace OktaAuthVsix
                 }
             };
 
-            var _oidcClient = new OidcClient(options);
+            var oidcClient = new OidcClient(options);
 
             LoginResult loginResult;
             try
             {
-                loginResult = await _oidcClient.LoginAsync();
+                loginResult = await oidcClient.LoginAsync();
             }
             catch (Exception exception)
             {
