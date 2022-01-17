@@ -78,7 +78,10 @@ namespace OktaAuthVsix
 
         private bool IsBrowserNavigatingToRedirectUri(Uri uri)
         {
-            return uri.AbsoluteUri.StartsWith(_options.EndUrl);
+            return
+                (!string.IsNullOrWhiteSpace(_options.EndUrl)
+                && uri.AbsoluteUri.StartsWith(_options.EndUrl))
+                || uri.Host != new Uri(_options.StartUrl).Host;
         }
     }
 }

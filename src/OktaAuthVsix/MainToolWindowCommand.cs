@@ -103,7 +103,6 @@ namespace OktaAuthVsix
                 Authority = "https://{YOUR_OKTA_AUTHORITY}.okta.com/",
                 ClientId = "{YOUR_OCTA_CLIENT_ID}",
                 Scope = "openid profile email", // Example scopes
-                RedirectUri = "http://127.0.0.1/sample-wpf-app",
                 Browser = new AuthBrowser(),
                 Policy = new Policy
                 {
